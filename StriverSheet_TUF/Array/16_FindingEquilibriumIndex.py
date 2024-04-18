@@ -32,10 +32,22 @@ Explanation: The sum of the numbers before index 2 is: 1 + -1 = 0
 The sum of the numbers after index 2 is: 0
 '''
 
+# using sum()
 def getEquilibriumIndex(arr):
+    for i in range(len(arr)):
+        if sum(arr[:i]) == sum(arr[i+1:]):
+            return i 
+    return len(arr)-1
 
 
-    pass
+# without using inbuilt function
+# def getEquilibriumIndex(arr):
+
+
+
+#     return 
+
+
 
 nums = [2,3,-1,8,4]     # 3
 print(getEquilibriumIndex(nums))
